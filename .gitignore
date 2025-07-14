@@ -6,5 +6,10 @@ preprocess/dataset
 preprocess/merged_dataset
 preprocess/cleaned_dataset
 
+#Ignore datasets for GPT2-Nano
+GPT2-Nano/data
+GPT2-Large/data
 
+#Wandb API keys
+wandbkey.env
 
