@@ -1,0 +1,10 @@
+# Ignore Python virtual environment directory
+venv/
+
+#Ignore datasets
+preprocess/dataset
+preprocess/merged_dataset
+preprocess/cleaned_dataset
+
+
+
