@@ -49,7 +49,7 @@ else:
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, 'data')
-chkpt_dir = os.path.join(data_dir, 'chkpt')
+chkpt_dir = os.path.join(base_dir,'..','chkpt','large','dp-sgd')
 
 logging.basicConfig(filename="./log/training_errors.log", level=logging.ERROR,
                     format="%(asctime)s %(levelname)s: %(message)s")
@@ -182,6 +182,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 epochs = 3
+iter = 0
 for epoch in range(epochs):
     for step, batch in enumerate(train_dataloader):
         try:
@@ -218,7 +219,7 @@ for epoch in range(epochs):
 
         if step % 5000 ==0:
             lora_model = model._module
-            save_path = os.path.join(chkpt_dir, "dp_sgd", f"epochs_{epoch}", f"iterations_{step}")
+            save_path = os.path.join(chkpt_dir, f"checkpoint-{iter}")
             os.makedirs(save_path, exist_ok=True)
             lora_model.save_pretrained(save_path)
             tokenizer.save_pretrained(save_path)
@@ -227,7 +228,7 @@ for epoch in range(epochs):
             torch.save({"epoch": epoch, "step": step}, os.path.join(save_path, "trainer_state.pt"))
             print(f"Saved LoRA model checkpoint to {save_path}")
 
-
+        iter +=1
         del input_ids, attention_mask, outputs, loss
         gc.collect()
         torch.cuda.empty_cache()

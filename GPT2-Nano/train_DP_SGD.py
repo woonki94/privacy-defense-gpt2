@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 base_dir = os.path.dirname(os.path.abspath(__file__))
-out_dir  = os.path.join(base_dir, 'data','chkpt','dp-sgd')
+out_dir  = os.path.join(base_dir,'..', 'chkpt','nano','dp_sgd')
 
 eval_interval = 500
 log_interval = 1
@@ -372,7 +372,7 @@ for epoch in range(EPOCHS):
                             'config': config,
                         }
                         print(f"saving checkpoint to {out_dir}")
-                        torch.save(checkpoint, os.path.join(out_dir, f'ckpt_{epoch}_{iter_num}.pt'))
+                        torch.save(checkpoint, os.path.join(out_dir, f'checkpoint-{iter_num}.pt'))
 
             if iter_num > max_iters:
                 break

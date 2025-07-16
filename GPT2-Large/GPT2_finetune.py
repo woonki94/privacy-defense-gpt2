@@ -28,7 +28,7 @@ else:
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, 'data')
-chkpt_dir = os.path.join(data_dir, 'chkpt')
+chkpt_dir = os.path.join(base_dir,'..', 'chkpt','large','plain')
 
 def tokenize_fn(example):
     return tokenizer(example["text"], truncation=True, max_length=512)
@@ -85,7 +85,7 @@ for name, param in model.named_parameters():
 training_args = TrainingArguments(
     overwrite_output_dir=True,
     gradient_checkpointing=False,
-    output_dir=os.path.join(chkpt_dir,"plain"),
+    output_dir=chkpt_dir,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=2,
     gradient_accumulation_steps=1,
