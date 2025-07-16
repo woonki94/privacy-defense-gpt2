@@ -18,3 +18,7 @@ wandbkey.env
 
 #Wandb log files
 wandb/
+
+#data generated when measuring accuracy
+measure_accuracy/outputs_from_model
+measure_accuracy/ref
