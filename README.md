@@ -234,8 +234,21 @@ chkpt/nano/dp-sgd/
 
 ### Optional: Use Pretrained Checkpoints
 
-If you do not wish to retrain the models from scratch, you may download our checkpoints and place them in the corresponding directories above.
+If you do not wish to retrain the models from scratch, you may download our pretrained checkpoints from the following link:
 
+**[Download Checkpoints (Google Drive)](https://drive.google.com/drive/folders/1i2-KrwdKyX9Ufemq3hpoqJRkKZnemLJ9?usp=sharing)**
+
+After downloading, place the contents into the appropriate checkpoint directories:
+
+```
+chkpt/
+├── large/
+│   ├── plain/
+│   └── dp_sgd/
+└── nano/
+    ├── plain/
+    └── dp-sgd/
+```
 
 
 
