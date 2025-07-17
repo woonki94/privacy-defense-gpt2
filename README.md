@@ -34,8 +34,15 @@ We compare model outputs using:
 * **Only minor drops in generation quality** (≤4 BERTScore points)
 * **Memory usage reduced** with ghost clipping: from >40GB to \~30GB (GPT-2 Large)
 
+---
 
-## Reproducing the Pipeline
+## End-to-End Usage Guide
+
+We provide step-by-step instructions to:
+- Prepare datasets from **Enron**, **PII-masked corpora**, and general text
+- Train **GPT-2 Nano** from scratch and fine-tune **GPT-2 Large** using **LoRA**
+- Apply **DP-SGD** using memory-efficient mechanisms like ghost clipping
+- Evaluate model utility and data leakage using BLEU, ROUGE, BERTScore, and extraction metrics
 
 ### Environment Setup
 
