@@ -22,3 +22,6 @@ wandb/
 #data generated when measuring accuracy
 measure_accuracy/outputs_from_model
 measure_accuracy/ref
+
+#ignore ds_store from max
+.DS_Store
