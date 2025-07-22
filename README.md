@@ -34,6 +34,13 @@ We compare model outputs using:
 * **Only minor drops in generation quality** (≤4 BERTScore points)
 * **Memory usage reduced** with ghost clipping: from >40GB to \~30GB (GPT-2 Large)
 
+
+## 📄 Resources
+
+* 📊 **Presentation Slides (PPT)**: [presentation.pdf](./reports/Initial_Presentation.pdf)
+* 📘 **Final Report**: [report.pdf](./reports/Data_Extraction_and_Defense.pdf)
+
+
 ---
 
 ## End-to-End Usage Guide
