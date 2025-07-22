@@ -37,8 +37,8 @@ We compare model outputs using:
 
 ## 📄 Resources
 
-* 📊 **Presentation Slides (PPT)**: [presentation.pdf](./reports/Initial_Presentation.pdf)
-* 📘 **Final Report**: [report.pdf](./reports/Data_Extraction_and_Defense.pdf)
+* 📊 **Presentation Slides (PPT)**: [presentation.pdf](./report/Initial_Presentation.pdf)
+* 📘 **Final Report**: [report.pdf](./report/Data_Extraction_and_Defense.pdf)
 
 
 ---
