@@ -13,9 +13,8 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel, GPT2Config, AutoTokeniz
 from tqdm import tqdm
 from peft import PeftModel, PeftConfig
 # For NanoGPT
-gpt2_nano_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "GPT2-Nano"))
-sys.path.append(gpt2_nano_path)
-from model import GPTConfig, GPT
+
+from GPT2_Nano.model import GPTConfig, GPT
 import tiktoken
 from bert_score import score
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
