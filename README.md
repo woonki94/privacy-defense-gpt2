@@ -102,7 +102,7 @@ Our experiments demonstrate the effectiveness of DP-SGD in mitigating privacy ri
 
 ### 🔍 Extraction by Sensitive Category
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/e08973d5-6785-47b5-a24c-e760f20fed26" alt="Sensitive Categories Barplot" width="600"/> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/e08973d5-6785-47b5-a24c-e760f20fed26" alt="Sensitive Categories Barplot" width="400"/> </p>
 
 > **Analysis**: The DP-trained models generate significantly fewer samples containing sensitive content such as names, email addresses, URLs, and license text.
 > **Conclusion**: DP-SGD is effective at mitigating memorization of identifiable or proprietary content.
