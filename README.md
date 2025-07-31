@@ -78,13 +78,34 @@ We apply our pipeline to two model setups:
 
 ## 📊 Key Results
 
-* 🔐 **DP-SGD reduced PII leakage by >90%** in both NanoGPT and GPT-2 Large.
-* ✅ **Minimal utility loss**: ≤4 BERTScore point drop vs. non-DP models.
-* 🧠 **Memory optimization**: Ghost clipping reduced usage from >40GB → \~30GB (GPT-2 Large).
+Our experiments demonstrate the effectiveness of DP-SGD in mitigating privacy risks while maintaining model utility:
 
-![465571472-7ecffb81-5b00-4eb8-b260-60ff62315b3c](https://github.com/user-attachments/assets/add64790-f507-483f-98ad-6fe44e82d189)
-![465571481-1509d1fa-5302-4735-a3d8-146f63387d7e](https://github.com/user-attachments/assets/e08973d5-6785-47b5-a24c-e760f20fed26)
+* 🔐 **Privacy Protection**:
+  Differentially Private SGD (DP-SGD) reduces **PII leakage by over 90%** in both NanoGPT and GPT-2 Large.
 
+* ✅ **Model Utility Preserved**:
+  Despite the privacy enhancements, generation quality suffers only **minor degradation**—with a maximum drop of **≤4 BERTScore points** compared to non-private models.
+
+* 🧠 **Memory Optimization**:
+  The introduction of **ghost clipping** reduces GPU memory usage during training (GPT-2 Large) from **>40 GB to \~30 GB**, enabling more scalable private training.
+
+---
+
+### 📉 Perplexity vs. Entropy of Extracted Samples
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/add64790-f507-483f-98ad-6fe44e82d189" alt="Perplexity vs. Entropy" width="600"/> </p>
+
+> **Observation**: Higher perplexity tends to align with higher entropy—indicating lower confidence and less structured outputs.
+> **Impact**: DP-SGD reduces both perplexity and entropy, producing outputs less likely to contain memorized, identifiable content.
+
+---
+
+### 🔍 Extraction by Sensitive Category
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/e08973d5-6785-47b5-a24c-e760f20fed26" alt="Sensitive Categories Barplot" width="600"/> </p>
+
+> **Analysis**: The DP-trained models generate significantly fewer samples containing sensitive content such as names, email addresses, URLs, and license text.
+> **Conclusion**: DP-SGD is effective at mitigating memorization of identifiable or proprietary content.
 
 
 ---
