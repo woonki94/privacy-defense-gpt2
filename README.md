@@ -35,7 +35,21 @@ We compare model outputs using:
 * **Memory usage reduced** with ghost clipping: from >40GB to \~30GB (GPT-2 Large)
 
 
-## Reproducing the Pipeline
+## 📄 Resources
+
+* 📊 **Presentation Slides (PPT)**: [presentation.pdf](./report/Initial_Presentation.pdf)
+* 📘 **Final Report**: [report.pdf](./report/Data_Extraction_and_Defense.pdf)
+
+
+---
+
+## End-to-End Usage Guide
+
+We provide step-by-step instructions to:
+- Prepare datasets from **Enron**, **PII-masked corpora**, and general text
+- Train **GPT-2 Nano** from scratch and fine-tune **GPT-2 Large** using **LoRA**
+- Apply **DP-SGD** using memory-efficient mechanisms like ghost clipping
+- Evaluate model utility and data leakage using BLEU, ROUGE, BERTScore, and extraction metrics
 
 ### Environment Setup
 
@@ -234,8 +248,21 @@ chkpt/nano/dp-sgd/
 
 ### Optional: Use Pretrained Checkpoints
 
-If you do not wish to retrain the models from scratch, you may download our checkpoints and place them in the corresponding directories above.
+If you do not wish to retrain the models from scratch, you may download our pretrained checkpoints from the following link:
 
+**[Download Checkpoints (Google Drive)](https://drive.google.com/drive/folders/1i2-KrwdKyX9Ufemq3hpoqJRkKZnemLJ9?usp=sharing)**
+
+After downloading, place the contents into the appropriate checkpoint directories:
+
+```
+chkpt/
+├── large/
+│   ├── plain/
+│   └── dp_sgd/
+└── nano/
+    ├── plain/
+    └── dp-sgd/
+```
 
 
 
