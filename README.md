@@ -3,10 +3,10 @@
 # 📚 Table of Contents
 
 1. [Overview](#-Overview)
-2. [What We Do](#-what-we-do)
-3. [Experimental Setup](#-experimental-setup)
-4. [Key Findings](#-key-findings)
-5. [Resources](#-resources)
+2. [Resources](#-resources)
+3. [What We Do](#-what-we-do)
+4. [Experimental Setup](#-experimental-setup)
+5. [Key Findings](#-key-findings)
 6. [Environment Setup](#-environment-setup)
 7. [Step 1: Dataset Preparation](#-step-1-dataset-preparation)
 
@@ -38,8 +38,16 @@ We apply our pipeline to two model setups:
 
 * 🧠 **NanoGPT** (trained from scratch)
 * 🛠️ **GPT-2 Large** (fine-tuned with LoRA adapters)
+---
+
+## 📄 Resources
+
+* 🎞️ **[Presentation Slides (PDF)](./report/Initial_Presentation.pdf)**
+* 📘 **[Final Report (PDF)](./report/Data_Extraction_and_Defense.pdf)**
+
 
 ---
+
 
 ## 🔍 What We Do
 
@@ -68,18 +76,16 @@ We apply our pipeline to two model setups:
 
 ---
 
-## 📊 Key Findings
+## 📊 Key Results
 
 * 🔐 **DP-SGD reduced PII leakage by >90%** in both NanoGPT and GPT-2 Large.
 * ✅ **Minimal utility loss**: ≤4 BERTScore point drop vs. non-DP models.
 * 🧠 **Memory optimization**: Ghost clipping reduced usage from >40GB → \~30GB (GPT-2 Large).
 
----
+![465571472-7ecffb81-5b00-4eb8-b260-60ff62315b3c](https://github.com/user-attachments/assets/add64790-f507-483f-98ad-6fe44e82d189)
+![465571481-1509d1fa-5302-4735-a3d8-146f63387d7e](https://github.com/user-attachments/assets/e08973d5-6785-47b5-a24c-e760f20fed26)
 
-## 📄 Resources
 
-* 🎞️ **[Presentation Slides (PDF)](./report/Initial_Presentation.pdf)**
-* 📘 **[Final Report (PDF)](./report/Data_Extraction_and_Defense.pdf)**
 
 ---
 
